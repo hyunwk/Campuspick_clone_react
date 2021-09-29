@@ -1,9 +1,19 @@
 import React from 'react'
 
-export default function DDay() {
+export default function DDay(props) {
+    const dDayStyle = {
+        color: "#0aafdf",
+        float: "right",
+        display: "block",
+        marginLeft: "8px",
+        lineHeight: "20px",
+        letterSpacing: "0",
+        fontSize: "12px",
+        fontWeight: "bold",
+    }
     return (
-        <div>
-            <h1>DDay</h1>
-        </div>
+        <span style={dDayStyle}>
+            D-{props.dDay}
+        </span>
     )
 }

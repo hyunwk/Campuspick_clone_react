@@ -9,10 +9,10 @@ export default function Item({profile, light, dDay, viewCount}) {
     console.log(profile);
     return (
         <>
-            <DDay dDay={dDay} />
-            <ViewCount viewCount={viewCount}/>
             <Profile profile={profile}/>
             <Light light={light}/>
+            <DDay dDay={dDay} />
+            <ViewCount viewCount={viewCount}/>
         </>
     )
 }

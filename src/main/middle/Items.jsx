@@ -20,19 +20,24 @@ export default function Items() {
             },
         ]
     )
-
+    const itemStyle = {
+        display: "block",
+        padding: "16px",
+        borderBottom: "1px solid #f2f2f2",
+      };
     return (
-        <ol>
+        <ul>
             {itemList.map(item => {
-                console.log(item);
                 return (
-                    <Item profile={item.profile}
-                        light={item.light} 
-                        dDay={item.dDay}       
-                        viewCount={item.viewCount}
-                    />
+                    <li key={item.key} style={itemStyle}>
+                        <Item profile={item.profile}
+                            light={item.light} 
+                            dDay={item.dDay}       
+                            viewCount={item.viewCount}
+                        />
+                    </li>
                 )
             })}
-        </ol>
+        </ul>
     )
 }
